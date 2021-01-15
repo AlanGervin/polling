@@ -1,0 +1,34 @@
+
+db.userVote.aggregate([
+{ $match: {vote: "yes"} },
+{ $group: { _id: "$user" }
+])
+
+
+
+
+ db.userVote1.aggregate([ { $match: {vote: "yes"} }, { $group: { _id: "$user", total: {$sum: "$value"} } } ])
+
+///////////////DB setup
+db.userVote1.insertMany([
+{user: 1234, vote: "yes", value: 1},
+{user: 3333, vote: "yes", value: 1},
+{user: 3222, vote: "yes", value: 1},
+{user: 2222, vote: "no", value: 1}
+])
+
+////find all yes
+db.userVote1.aggregate({ $match: {vote:"yes"} })
+
+////////////Gets total for yes
+db.userVote1.aggregate([
+{ $match: {vote: "yes"} },
+{ $group: { _id: "user", total: { $sum: "$value" } } }
+])
+
+
+
+
+
+
+

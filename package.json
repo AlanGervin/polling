@@ -1,0 +1,17 @@
+{
+  "name": "pollingprediction",
+  "version": "1.0.0",
+  "description": "twitch polling/prediection for non affiliate streamers",
+  "main": "gs.js",
+  "dependencies": {
+    "mongod": "^2.0.0",
+    "mongodb": "^3.6.3",
+    "mongoose": "^5.11.11"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "!test"
+  },
+  "author": "",
+  "license": "ISC"
+}

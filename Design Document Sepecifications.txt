@@ -1,0 +1,5 @@
+
+1. A database that tracks userId and number
+2. only allows one vote for userId
+3. every time a new prediction the database gets cleared out.
+4. displays results on a webpage with a graph and total votes

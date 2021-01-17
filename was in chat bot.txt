@@ -1,0 +1,22 @@
+
+//required to connect to the local mongoDB instance
+const mongoose = require('mongoose');
+const { UserHostQuery } = require("ircv3/lib/Message/MessageTypes/Commands");
+mongoose.connect('mongodb://localhost/27017', { useNewUrlParser: true, useUnifiedTopology: true});
+
+const mgdb = mongoose.connection;
+mgdb.on('error', console.error.bind(console, 'connection error:'));
+mgdb.once('open', function() {
+  // we're connected!
+});
+
+//flushes the databases
+mgdb.dropDatabase();
+mgdb.createCollection("uservotes");
+//creates the schema for the database
+const userVoteSchema = new mongoose.Schema({
+    "userId": String,
+    "vote": String,
+});
+//creates the database from the schema
+const UserVote = mongoose.model('userVote', userVoteSchema);

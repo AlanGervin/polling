@@ -1,0 +1,13 @@
+.noContainer {
+    font-size: 20px;
+    float:right;
+}
+
+.yesContainer {
+    font-size: 20px;
+    float:left;
+}
+
+.inline {
+    display:inline;
+}

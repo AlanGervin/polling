@@ -1,0 +1,1 @@
+put the voters into an array. check the array for the voter before adding the vote.

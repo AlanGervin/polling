@@ -1,6 +1,15 @@
 html {
     font-family: 'Coda Caption', sans-serif;
 }
+
+#main {
+    opacity:0;
+}
+
+#questionBanner {
+    font-size:2em;
+}
+
 .noContainer {
     font-size: 5em;
     float:right;
